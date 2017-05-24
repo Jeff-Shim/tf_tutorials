@@ -7,6 +7,10 @@ To run examples, it is required that `matplotlib` is installed in your system.
 > pip install matplotlib
 ```
 
+## When your machine is busy...
+* [AutoDraw](https://www.autodraw.com/)
+* [Image-to-Image Demo](https://affinelayer.com/pixsrv/)
+
 ## Acknowledgement
 We made this tutorial based on the following websites and materials.
 * [TensorFlow website](http://www.tensorflow.org)
