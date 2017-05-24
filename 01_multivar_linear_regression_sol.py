@@ -5,7 +5,6 @@ of general psychology based on previous exam scores
 """
 
 import numpy as np
-import matplotlib.pyplot as plt
 import tensorflow as tf
 import csv
 
@@ -56,9 +55,9 @@ with tf.Session() as sess:
     # Step 9: output the values of w and b
     W_value, b_value = sess.run([W, b])
 
-# # plot the results
-# X, Y = data.T[0], data.T[1]
-# plt.plot(X, Y, 'bo', label='Real data')
-# plt.plot(X, X * w_value + b_value, 'r', label='Predicted data')
-# plt.legend()
-# plt.show()
+    # predict
+    for i in [2, 13, 18]:
+        y_h = sess.run(Y_predicted, feed_dict={X: np.expand_dims(data[i][:-1], 0)})
+        print('X1: {}, X2: {}, X3: {}'.format(data[i][0], data[i][1], data[i][2]))
+        print('Y_predicted: {}'.format(np.squeeze(y_h)))
+        print('Y: {}'.format(data[i][-1]))
